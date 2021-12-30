@@ -79,7 +79,8 @@ export function Experience() {
           index === currentTab && (
             <VStack
               align="left"
-              bg="#1e293bc1"
+              bg="#1e293b44"
+              shadow="lg"
               p="2rem"
               rounded="lg"
               pos="relative"
