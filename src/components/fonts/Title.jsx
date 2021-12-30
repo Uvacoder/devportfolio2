@@ -1,9 +1,10 @@
-import { chakra } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
 
 export function Title({ children }) {
   return (
-    <chakra.h1
-      fontSize="title.primary"
+    <Heading
+      as="h1"
+      fontSize={{ base: "48px", md: "title.primary" }}
       color="text.primary"
       fontWeight="black"
       letterSpacing="-1.5px"
@@ -12,6 +13,6 @@ export function Title({ children }) {
       mb="24px"
     >
       {children}
-    </chakra.h1>
+    </Heading>
   );
 }

@@ -11,7 +11,7 @@ const COLOR = "purple";
 
 export function Projects() {
   return (
-    <Section>
+    <Section align="left">
       <HeaderIcon icon={FaBolt} color={COLOR} />
       <SubHeader color={COLOR}>Projects</SubHeader>
       <Header>Collection of personal projects</Header>

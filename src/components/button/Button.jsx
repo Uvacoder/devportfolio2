@@ -15,6 +15,8 @@ export function AltButton({ children, icon: Icon = false }) {
       _hover={{ bg: "gray.700" }}
       _highlighted={5}
       shadow="md"
+      w={{ base: "full", md: "auto" }}
+      justifyContent="center"
     >
       {Icon && (
         <chakra.span mr="3" fontSize="18px">
@@ -36,8 +38,10 @@ export function Button({ children, icon: Icon = false }) {
       rounded="lg"
       fontWeight="bold"
       fontSize="14px"
+      w={{ base: "full", md: "auto" }}
       transition={"all 0.2s ease-in-out"}
       _hover={{ bg: "blue.300" }}
+      justifyContent="center"
     >
       {Icon && (
         <chakra.span mr="3" fontSize="18px">

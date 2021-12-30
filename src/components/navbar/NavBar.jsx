@@ -12,7 +12,7 @@ export function NavBar() {
   return (
     <HStack py="2rem" w="full" maxW="5xl">
       <Text
-        fontSize="42px"
+        fontSize="32px"
         fontWeight="black"
         display="flex"
         letterSpacing="-5.5px"

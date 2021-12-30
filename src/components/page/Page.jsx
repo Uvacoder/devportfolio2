@@ -6,10 +6,11 @@ export function Page({ children }) {
       bg="bg.primary"
       justify="start"
       align="center"
-      spacing="24"
+      spacing="6rem"
       maxW="100vw"
       minH="100vh"
       as="main"
+      px="2rem"
       w="100%"
     >
       {children}

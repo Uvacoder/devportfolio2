@@ -7,7 +7,7 @@ import {
   CodeEditor,
 } from "../components";
 import { FaRegEnvelope, FaArrowDown } from "react-icons/fa";
-import { HStack } from "@chakra-ui/react";
+import { HStack, Stack } from "@chakra-ui/react";
 
 const COLOR = "pink";
 
@@ -20,10 +20,16 @@ export function Hero() {
         goal is to create engaging experiences for users, with a fine balance of
         technology and design.
       </TitleBody>
-      <HStack spacing="6" pb="16">
+      <Stack
+        direction={["column", "column", "row"]}
+        spacing="6"
+        pb="16"
+        w="full"
+        justify="center"
+      >
         <Button icon={FaRegEnvelope}>Contact</Button>
         <AltButton icon={FaArrowDown}>Resume</AltButton>
-      </HStack>
+      </Stack>
       <CodeEditor />
     </Section>
   );
