@@ -1,8 +1,8 @@
 import { VStack } from "@chakra-ui/react";
 
-export function Section({ children, align = "left" }) {
+export function Section({ children, align = "left", id }) {
   return (
-    <VStack as="section" align={align} w="full" maxW="5xl">
+    <VStack id={id} as="section" align={align} w="full" maxW="5xl">
       {children}
     </VStack>
   );

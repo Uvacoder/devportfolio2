@@ -1,9 +1,10 @@
 import { Hero, Experience, Projects, Tech } from "./sections";
-import { Page } from "./components";
+import { Page, NavBar } from "./components";
 
 function App() {
   return (
     <Page>
+      <NavBar />
       <Hero />
       <Tech />
       <Experience />

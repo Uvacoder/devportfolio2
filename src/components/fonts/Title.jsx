@@ -10,7 +10,6 @@ export function Title({ children }) {
       lineHeight="60px"
       textAlign="center"
       mb="24px"
-      mt="10rem"
     >
       {children}
     </chakra.h1>

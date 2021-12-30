@@ -11,7 +11,7 @@ const COLOR = "blue";
 
 export function Experience() {
   return (
-    <Section>
+    <Section id="Experience">
       <HeaderIcon icon={FaBriefcase} color={COLOR} />
       <SubHeader color={COLOR}>Work experience</SubHeader>
       <Header>Full stack developer</Header>

@@ -4,3 +4,4 @@ export * from "./section";
 export * from "./icons";
 export * from "./button";
 export * from "./code";
+export * from "./navbar";

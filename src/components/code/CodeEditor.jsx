@@ -67,7 +67,7 @@ export function CodeEditor() {
         <Box w=".5rem" h=".7rem" bg="green.300" rounded="full" ml="1rem" />
       </HStack>
       <HStack p="1rem">
-        <LineNumbers length={10} />
+        <LineNumbers length={11} />
         <VStack spacing="0" pr="2rem">
           <HTMLTag el="html" indent={0}>
             <HTMLTag el="h1" indent={1}>
@@ -75,9 +75,9 @@ export function CodeEditor() {
             </HTMLTag>
             <HTMLTag el="p" indent={1}>
               <Content indent={2}>
-                A utility-first CSS framework packed with classes like flex,
-                pt-4, text-center and rotate-90 that can be composed to build
-                any design, directly in your markup.
+                I'm a self-taught frontend developer based in Salt Lake City,
+                Utah. My goal is to create engaging experiences for users, with
+                a fine balance of technology and design.
               </Content>
             </HTMLTag>
           </HTMLTag>

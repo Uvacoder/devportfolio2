@@ -1,4 +1,5 @@
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import "./global.css";
 
 const config = {
   initialColorMode: "dark",

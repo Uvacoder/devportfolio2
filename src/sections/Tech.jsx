@@ -17,7 +17,7 @@ const ICONS = [
 
 export function Tech() {
   return (
-    <HStack color="whiteAlpha.500" fontSize="40px" spacing="10">
+    <HStack color="whiteAlpha.400" fontSize="40px" spacing="10">
       {ICONS.map((Icon) => (
         <Tooltip label={Icon.label}>
           <chakra.span
