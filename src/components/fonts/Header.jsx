@@ -7,6 +7,7 @@ export function Header({ children }) {
       fontSize="header.primary"
       fontWeight="black"
       letterSpacing="-.025em"
+      pb=".5rem"
     >
       {children}
     </chakra.h2>

@@ -11,7 +11,7 @@ export function HeaderIcon({ icon: Icon, color }) {
       ring="4px"
       w="4rem"
       h="4rem"
-      mb="4"
+      mb="1.5rem"
     >
       <Icon />
     </Center>

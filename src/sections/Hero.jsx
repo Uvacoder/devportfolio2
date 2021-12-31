@@ -11,6 +11,7 @@ import { Stack } from "@chakra-ui/react";
 import Typewriter from "typewriter-effect";
 
 const words = ["a developer.", "a photographer.", "Tanner!"];
+const Typing = Typewriter;
 
 export function Hero() {
   return (
@@ -23,7 +24,7 @@ export function Hero() {
       >
         <Title>Hello, I'm&#160;</Title>
         <Title>
-          <Typewriter
+          <Typing
             options={{
               wrapperClassName: "typewriter",
               strings: words,
@@ -51,7 +52,7 @@ export function Hero() {
       </Stack>
       <CodeEditor
         text={
-          <Typewriter
+          <Typing
             options={{
               strings: words,
               autoStart: true,

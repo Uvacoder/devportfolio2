@@ -1,6 +1,13 @@
 import { HStack, Tooltip, chakra } from "@chakra-ui/react";
 import { DiReact, DiNodejs, DiPython, DiJavascript1 } from "react-icons/di";
-import { Section, Header, HeaderBody } from "../components";
+import { FaWrench } from "react-icons/fa";
+import {
+  Section,
+  Header,
+  HeaderBody,
+  HeaderIcon,
+  SubHeader,
+} from "../components";
 
 import {
   SiSvelte,
@@ -25,12 +32,14 @@ const ICONS = [
 
 export function Tech() {
   return (
-    <Section align="center">
-      <Header>Tech Skills</Header>
+    <Section align="left" id="skills">
+      <HeaderIcon icon={FaWrench} color="green" />
+      <SubHeader color="green">Technology</SubHeader>
+      <Header>Skills</Header>
       <HeaderBody>
         I have experience with the following technologies:
       </HeaderBody>
-      <HStack fontSize="32px" spacing="5" p="1rem">
+      <HStack fontSize="32px" spacing="5" pt="1rem">
         {ICONS.map((Icon) => (
           <Tooltip label={Icon.label}>
             <chakra.span

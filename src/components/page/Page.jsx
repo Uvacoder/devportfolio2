@@ -6,7 +6,7 @@ export function Page({ children }) {
       bg="bg.primary"
       justify="start"
       align="center"
-      spacing="6rem"
+      spacing="8rem"
       maxW="100vw"
       minH="100vh"
       as="main"

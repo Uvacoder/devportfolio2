@@ -58,7 +58,7 @@ export function Experience() {
         challenges.
       </HeaderBody>
 
-      <HStack spacing={5} pt="1rem" pb="1rem">
+      <HStack spacing={5} pt="2rem" pb="1rem">
         {JOBS.map((job, index) => (
           <Button
             color={index === currentTab ? "blue.400" : "whiteAlpha.500"}

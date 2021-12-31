@@ -7,6 +7,7 @@ import {
   chakra,
 } from "@chakra-ui/react";
 import { Header } from "..";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 export function NavBar() {
   return (
@@ -25,10 +26,19 @@ export function NavBar() {
       </Text>
 
       <Spacer />
-      <HStack color="text.light" spacing="1.5rem">
+      <HStack color="text.light" spacing="1rem">
         <Link href="#Experience">Experience</Link>
         <Link>Projects</Link>
         <Link>Contact</Link>
+        <Link fontSize="18px" p=".7rem" bg="whiteAlpha.100" rounded="lg">
+          <FaGithub />
+        </Link>
+        <Link fontSize="18px" p=".7rem" bg="whiteAlpha.100" rounded="lg">
+          <FaLinkedin />
+        </Link>
+        <Link fontSize="18px" p=".7rem" bg="whiteAlpha.100" rounded="lg">
+          <FaTwitter />
+        </Link>
       </HStack>
     </HStack>
   );
