@@ -5,7 +5,7 @@ export function HeaderBody({ children }) {
     <chakra.p
       fontSize="header.body"
       color="text.light"
-      maxW="2xl"
+      maxW="3xl"
       textAlign="left"
     >
       {children}

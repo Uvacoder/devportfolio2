@@ -48,7 +48,7 @@ const LineNumbers = ({ length }) => {
   );
 };
 
-export function CodeEditor() {
+export function CodeEditor({ text }) {
   return (
     <VStack
       bg="#0F1629"
@@ -71,7 +71,7 @@ export function CodeEditor() {
         <VStack spacing="0" pr="2rem">
           <HTMLTag el="html" indent={0}>
             <HTMLTag el="h1" indent={1}>
-              <Content indent={2}>Hello, I'm Tanner Thomas!</Content>
+              <Content indent={2}>{text}</Content>
             </HTMLTag>
             <HTMLTag el="p" indent={1}>
               <Content indent={2}>
