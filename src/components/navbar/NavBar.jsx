@@ -44,13 +44,31 @@ export function NavBar() {
         <Link href="#Experience">Experience</Link>
         <Link>Projects</Link>
         <Link>Contact</Link>
-        <Link fontSize="18px" p=".7rem" bg="whiteAlpha.100" rounded="lg">
+        <Link
+          fontSize="18px"
+          p=".7rem"
+          bg="whiteAlpha.100"
+          rounded="lg"
+          color="purple.400"
+        >
           <FaGithub />
         </Link>
-        <Link fontSize="18px" p=".7rem" bg="whiteAlpha.100" rounded="lg">
+        <Link
+          fontSize="18px"
+          p=".7rem"
+          bg="whiteAlpha.100"
+          rounded="lg"
+          color="blue.400"
+        >
           <FaLinkedin />
         </Link>
-        <Link fontSize="18px" p=".7rem" bg="whiteAlpha.100" rounded="lg">
+        <Link
+          fontSize="18px"
+          p=".7rem"
+          bg="whiteAlpha.100"
+          rounded="lg"
+          color="blue.500"
+        >
           <FaTwitter />
         </Link>
       </HStack>
