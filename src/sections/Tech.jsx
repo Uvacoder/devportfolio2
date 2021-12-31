@@ -1,4 +1,4 @@
-import { HStack, Tooltip, chakra } from "@chakra-ui/react";
+import { HStack, Tooltip, chakra, Wrap } from "@chakra-ui/react";
 import { DiReact, DiNodejs, DiPython, DiJavascript1 } from "react-icons/di";
 import { FaWrench } from "react-icons/fa";
 import {
@@ -39,11 +39,18 @@ export function Tech() {
       <HeaderBody>
         I have experience with the following technologies:
       </HeaderBody>
-      <HStack fontSize="32px" spacing="5" pt="1rem">
+      <Wrap
+        w="100%"
+        spacing=".4rem"
+        justify="left"
+        fontSize="32px"
+        w="full"
+        maxW="2xl"
+        pt="1rem"
+      >
         {ICONS.map((Icon) => (
           <Tooltip label={Icon.label}>
             <chakra.span
-              transition="all 0.2s "
               color={Icon.color}
               bg="#162032"
               p="1rem"
@@ -54,7 +61,7 @@ export function Tech() {
             </chakra.span>
           </Tooltip>
         ))}
-      </HStack>
+      </Wrap>
     </Section>
   );
 }

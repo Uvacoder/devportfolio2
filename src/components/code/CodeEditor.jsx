@@ -31,6 +31,7 @@ const Content = ({ children, indent, ref }) => (
     pl={`${indent * 30}px`}
     color="white"
     maxW="lg"
+    fontSize="12px"
   >
     {children}
   </Code>
@@ -45,10 +46,10 @@ const LineNumbers = ({ length }) => {
     <Code
       bg="none"
       color="gray.700"
-      fontSize="14px"
+      fontSize="12px"
       fontWeight="bold"
       pr="1rem"
-      maxW="2.5rem"
+      maxW="2.2rem"
     >
       {lines.join("\n")}
     </Code>
@@ -73,9 +74,9 @@ export function CodeEditor({ text }) {
         <Box w=".5rem" h=".7rem" bg="yellow.300" rounded="full" ml="1rem" />
         <Box w=".5rem" h=".7rem" bg="green.300" rounded="full" ml="1rem" />
       </HStack>
-      <HStack p="1rem">
-        <LineNumbers length={11} />
-        <VStack spacing="0" pr="2rem">
+      <HStack p=".5rem" spacing="0">
+        <LineNumbers length={14} />
+        <VStack spacing="0">
           <HTMLTag el="html" indent={0}>
             <HTMLTag el="h1" indent={1}>
               <Content indent={2}>Hello, I'm&#160;{text}</Content>
