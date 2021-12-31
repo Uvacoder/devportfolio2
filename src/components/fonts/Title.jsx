@@ -10,7 +10,7 @@ export function Title({ children, color = "text.primary" }) {
       letterSpacing="-1.5px"
       lineHeight="60px"
       textAlign="center"
-      mb="24px"
+      display="flex"
     >
       {children}
     </Heading>

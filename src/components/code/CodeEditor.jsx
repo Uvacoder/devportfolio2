@@ -24,7 +24,14 @@ const HTMLTag = ({ el, indent, children }) => (
 );
 
 const Content = ({ children, indent, ref }) => (
-  <Code ref={ref} bg="none" pl={`${indent * 30}px`} color="white" maxW="lg">
+  <Code
+    ref={ref}
+    bg="none"
+    display="flex"
+    pl={`${indent * 30}px`}
+    color="white"
+    maxW="lg"
+  >
     {children}
   </Code>
 );
@@ -71,7 +78,7 @@ export function CodeEditor({ text }) {
         <VStack spacing="0" pr="2rem">
           <HTMLTag el="html" indent={0}>
             <HTMLTag el="h1" indent={1}>
-              <Content indent={2}>{text}</Content>
+              <Content indent={2}>Hello, I'm&#160;{text}</Content>
             </HTMLTag>
             <HTMLTag el="p" indent={1}>
               <Content indent={2}>

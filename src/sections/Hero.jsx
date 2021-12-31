@@ -7,25 +7,33 @@ import {
   CodeEditor,
 } from "../components";
 import { FaRegEnvelope, FaArrowDown } from "react-icons/fa";
-import { HStack, Stack } from "@chakra-ui/react";
-import { useTypeWriter } from "../hooks/useTypeWriter";
+import { Stack } from "@chakra-ui/react";
+import Typewriter from "typewriter-effect";
 
-const COLOR = "pink";
-const phrase = "I'm Tanner Thomas!";
-
-const words = [
-  { text: "a developer", color: "pink" },
-  { text: "a photographer", color: "purple" },
-  { text: "a human", color: "blue" },
-  { text: "Tanner", color: "green" },
-];
+const words = ["a developer.", "a photographer.", "Tanner!"];
 
 export function Hero() {
-  const [text, index] = useTypeWriter(words, 100);
-
   return (
     <Section align="center">
-      <Title color={`${words[index].color}.400`}>Hello, I'm {text}</Title>
+      <Stack
+        direction={["column", "column", "column", "row"]}
+        justify="center"
+        align="center"
+        mb="24px"
+      >
+        <Title>Hello, I'm&#160;</Title>
+        <Title>
+          <Typewriter
+            options={{
+              wrapperClassName: "typewriter",
+              strings: words,
+              autoStart: true,
+              loop: true,
+              cursor: "",
+            }}
+          />
+        </Title>
+      </Stack>
       <TitleBody>
         I'm a self-taught frontend developer based in Salt Lake City, Utah. My
         goal is to create engaging experiences for users, with a fine balance of
@@ -41,7 +49,17 @@ export function Hero() {
         <Button icon={FaRegEnvelope}>Contact</Button>
         <AltButton icon={FaArrowDown}>Resume</AltButton>
       </Stack>
-      <CodeEditor text={"text"} />
+      <CodeEditor
+        text={
+          <Typewriter
+            options={{
+              strings: words,
+              autoStart: true,
+              loop: true,
+            }}
+          />
+        }
+      />
     </Section>
   );
 }
