@@ -42,7 +42,7 @@ export function Hero() {
       </TitleBody>
       <Stack
         direction={["column", "column", "row"]}
-        spacing="6"
+        spacing="4"
         pb="16"
         w="full"
         justify="center"

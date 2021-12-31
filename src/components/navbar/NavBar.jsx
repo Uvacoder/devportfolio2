@@ -5,13 +5,16 @@ import {
   Spacer,
   Text,
   chakra,
+  useDisclosure,
 } from "@chakra-ui/react";
-import { Header } from "..";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { MenuModal } from "./MenuModal";
+import { FaGithub, FaLinkedin, FaTwitter, FaBars } from "react-icons/fa";
 
 export function NavBar() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
-    <HStack py="2rem" w="full" maxW="5xl">
+    <HStack pt="1rem" pb={[0, 0, "6rem"]} w="full" maxW="5xl">
       <Text
         fontSize="32px"
         fontWeight="black"
@@ -26,7 +29,18 @@ export function NavBar() {
       </Text>
 
       <Spacer />
-      <HStack color="text.light" spacing="1rem">
+      <IconButton
+        onClick={onOpen}
+        display={["flex", "flex", "none"]}
+        icon={<FaBars />}
+      />
+      <MenuModal isOpen={isOpen} onClose={onClose} />
+
+      <HStack
+        display={["none", "none", "flex"]}
+        color="text.light"
+        spacing="1rem"
+      >
         <Link href="#Experience">Experience</Link>
         <Link>Projects</Link>
         <Link>Contact</Link>

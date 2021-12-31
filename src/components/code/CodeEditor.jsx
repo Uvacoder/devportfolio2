@@ -70,9 +70,9 @@ export function CodeEditor({ text }) {
     >
       <HStack h="2rem" w="100%" borderBottom="1px solid" borderColor="gray.700">
         {/* status bar */}
-        <Box w=".5rem" h=".7rem" bg="red.300" rounded="full" ml="1rem" />
-        <Box w=".5rem" h=".7rem" bg="yellow.300" rounded="full" ml="1rem" />
-        <Box w=".5rem" h=".7rem" bg="green.300" rounded="full" ml="1rem" />
+        <Box w=".5rem" h=".5rem" bg="red.300" rounded="full" ml="1rem" />
+        <Box w=".5rem" h=".5rem" bg="yellow.300" rounded="full" ml="1rem" />
+        <Box w=".5rem" h=".5rem" bg="green.300" rounded="full" ml="1rem" />
       </HStack>
       <HStack p=".5rem" spacing="0">
         <LineNumbers length={14} />
