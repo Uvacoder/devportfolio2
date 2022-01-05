@@ -41,11 +41,11 @@ export function Tech() {
       </HeaderBody>
       <Wrap
         w="100%"
-        spacing=".4rem"
-        justify="left"
+        display="flex"
+        spacing="1rem"
+        justify="space-between"
         fontSize="32px"
-        w="full"
-        maxW="2xl"
+        // maxW="2xl"
         pt="1rem"
       >
         {ICONS.map((Icon) => (
