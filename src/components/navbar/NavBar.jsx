@@ -41,9 +41,10 @@ export function NavBar() {
         color="text.light"
         spacing="1rem"
       >
-        <Link href="#Experience">Experience</Link>
-        <Link>Projects</Link>
-        <Link>Contact</Link>
+        <Link href="#skills">Skills</Link>
+        <Link href="#experience">Experience</Link>
+        <Link href="#projects">Projects</Link>
+        <Link href="#contact">Contact</Link>
         <Link
           fontSize="18px"
           p=".7rem"

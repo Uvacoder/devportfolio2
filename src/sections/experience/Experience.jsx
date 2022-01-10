@@ -15,9 +15,9 @@ export function Experience() {
   const [currentTab, setCurrentTab] = useState(0);
 
   return (
-    <Section id="Experience" align="left">
-      <HeaderIcon icon={FaBriefcase} color={COLOR} />
-      <SubHeader color={COLOR}>Work experience</SubHeader>
+    <Section id="experience" align="left">
+      <HeaderIcon icon={FaBriefcase} color={"blue"} />
+      <SubHeader color={"blue"}>Work experience</SubHeader>
       <Header>Full stack developer</Header>
       <HeaderBody>
         I'm a developer and photographer. I've been working as a developer for

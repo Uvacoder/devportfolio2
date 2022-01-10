@@ -1,4 +1,4 @@
-import { Hero, Experience, Projects, Tech } from "./sections";
+import { Hero, Experience, Projects, Tech, Skills } from "./sections";
 import { Page, NavBar } from "./components";
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
     <Page>
       <NavBar />
       <Hero />
-      <Tech />
+      <Skills />
       <Experience />
       <Projects />
     </Page>
