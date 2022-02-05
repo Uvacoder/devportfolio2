@@ -1,6 +1,9 @@
 import { Center } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 export function HeaderIcon({ icon: Icon, color }) {
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <Center
       ringColor={`${color}.200`}
@@ -11,9 +14,16 @@ export function HeaderIcon({ icon: Icon, color }) {
       ring="4px"
       w="4rem"
       h="4rem"
-      mb="1.5rem"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      <Icon />
+      <motion.div
+        animate={{
+          y: isHovered ? -3 : 0,
+        }}
+      >
+        <Icon />
+      </motion.div>
     </Center>
   );
 }

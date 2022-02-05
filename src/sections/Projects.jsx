@@ -6,6 +6,8 @@ import {
   HeaderIcon,
 } from "../components";
 import { FaBolt } from "react-icons/fa";
+import { MotionGrid } from "../components/motion/MotionGrid";
+import { MotionCard } from "../components/motion/MotionCard";
 
 const COLOR = "purple";
 
@@ -19,6 +21,7 @@ export function Projects() {
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat at
         laudantium ipsum, voluptate quae eligendi eaque ratione.
       </HeaderBody>
+      <MotionCard />
     </Section>
   );
 }

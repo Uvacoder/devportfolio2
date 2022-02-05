@@ -1,6 +1,10 @@
 import { chakra } from "@chakra-ui/react";
+import React from "react";
+import { motion } from "framer-motion";
 
 export function AltButton({ children, icon: Icon = false }) {
+  const [isHovered, setIsHovered] = React.useState(false);
+
   return (
     <chakra.button
       display="flex"
@@ -17,10 +21,14 @@ export function AltButton({ children, icon: Icon = false }) {
       shadow="md"
       w={{ base: "full", md: "auto" }}
       justifyContent="center"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       {Icon && (
         <chakra.span mr="3" fontSize="18px">
-          <Icon />
+          <motion.div animate={{ y: isHovered ? 3 : 0 }}>
+            <Icon />
+          </motion.div>
         </chakra.span>
       )}
       {children}
@@ -29,6 +37,8 @@ export function AltButton({ children, icon: Icon = false }) {
 }
 
 export function Button({ children, icon: Icon = false }) {
+  const [isHovered, setIsHovered] = React.useState(false);
+
   return (
     <chakra.button
       display="flex"
@@ -42,10 +52,14 @@ export function Button({ children, icon: Icon = false }) {
       transition={"all 0.2s ease-in-out"}
       _hover={{ bg: "blue.300" }}
       justifyContent="center"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       {Icon && (
         <chakra.span mr="3" fontSize="18px">
-          <Icon />
+          <motion.div animate={{ x: isHovered ? -3 : 0 }}>
+            <Icon />
+          </motion.div>
         </chakra.span>
       )}
       {children}
