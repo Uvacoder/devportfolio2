@@ -1,14 +1,12 @@
-import { Hero, Experience, Projects, Tech, Skills } from "./sections";
-import { Page, NavBar } from "./components";
+import { Page, Navigation } from "./components";
+import { Home, Skills } from "./sections";
 
 function App() {
   return (
     <Page>
-      <NavBar />
-      <Hero />
+      <Navigation />
+      <Home />
       <Skills />
-      <Experience />
-      <Projects />
     </Page>
   );
 }
