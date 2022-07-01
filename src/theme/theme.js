@@ -1,6 +1,6 @@
 import { extendTheme } from "@chakra-ui/react";
-import { colors } from "./foundation";
 import { styles } from "./global";
+import { colors } from "./colors";
 
 const config = {
   initialColorMode: "dark",
@@ -11,6 +11,9 @@ const theme = extendTheme({
   config,
   colors,
   styles,
+  fonts: {
+    // body: "Poppins",
+  },
 });
 
 export { theme };

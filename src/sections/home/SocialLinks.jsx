@@ -16,7 +16,7 @@ function SocialLink({ icon: Icon, url, color }) {
 
 function SocialLinks({ links = [] }) {
   return (
-    <HStack spacing={4}>
+    <HStack spacing={2}>
       {links.map((link) => (
         <SocialLink key={link.url} {...link} />
       ))}

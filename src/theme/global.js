@@ -1,11 +1,11 @@
-import { theme } from "@chakra-ui/react";
-
-const styles = {
+export const styles = {
   global: {
     body: {
-      bg: "_.bg",
+      bg: "primary.bg",
+      p: "primary.text",
+    },
+    Text: {
+      color: "primary.text",
     },
   },
 };
-
-export { styles };

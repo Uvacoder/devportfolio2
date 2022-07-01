@@ -1,18 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import { Section } from "../../components";
 import config from "../../config";
-import { IconButton, HStack } from "@chakra-ui/react";
+import { IconButton, HStack, Tooltip } from "@chakra-ui/react";
+import { ScaleUp } from "../../components/animations";
 
-const SkillIcon = ({ icon: Icon, color }) => (
-  <IconButton icon={<Icon />} fontSize="4xl" variant="ghost" color={color} />
-);
+const Icon = ({ icon: Icon, color, label }) => {
+  return (
+    <Tooltip
+      label={label}
+      aria-label="A tooltip"
+      bg="primary.button"
+      color="white"
+    >
+      <IconButton
+        icon={<Icon />}
+        fontSize="4xl"
+        p="1rem"
+        variant="ghost"
+        bg="none"
+        _hover={{ transform: "translateY(-4px)", color: color }}
+        color="primary.text"
+        cursor="default"
+        transform="translateY(0)"
+      />
+    </Tooltip>
+  );
+};
 
 function Skills() {
   return (
     <Section maxW="100%">
-      <HStack spacing={8}>
-        {config.skills.map((skill) => (
-          <SkillIcon key={skill.name} icon={skill.icon} color={skill.color} />
+      <HStack spacing={10}>
+        {config.skills.map((skill, i) => (
+          <ScaleUp delay={i * 0.12}>
+            <Icon
+              key={skill.name}
+              label={skill.label}
+              icon={skill.icon}
+              color={skill.color}
+            />
+          </ScaleUp>
         ))}
       </HStack>
     </Section>

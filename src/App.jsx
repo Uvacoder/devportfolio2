@@ -1,5 +1,6 @@
 import { Page, Navigation } from "./components";
 import { Home, Skills } from "./sections";
+import { Image } from "@chakra-ui/react";
 
 function App() {
   return (
