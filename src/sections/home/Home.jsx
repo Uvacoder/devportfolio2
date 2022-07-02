@@ -9,7 +9,7 @@ function Home() {
   const isMounted = useIsMounted();
 
   return (
-    <Section h="75vh" maxW="100%">
+    <Section minH="80vh" maxW="100%" id="home" pt="5rem">
       <FadeUp delay={0.2}>
         <H1>Boost your design productivity</H1>
       </FadeUp>

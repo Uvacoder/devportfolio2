@@ -1,6 +1,6 @@
 import { VStack } from "@chakra-ui/react";
 
-function Section({ children, bg = "", h = "auto", maxW = "7xl" }) {
+function Section({ children, bg = "", h = "auto", maxW = "7xl", ...props }) {
   return (
     <VStack
       as="section"
@@ -10,6 +10,7 @@ function Section({ children, bg = "", h = "auto", maxW = "7xl" }) {
       h={h}
       w="100%"
       maxW={maxW}
+      {...props}
     >
       {children}
     </VStack>

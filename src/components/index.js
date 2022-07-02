@@ -1,4 +1,4 @@
-export * from "./Page";
-export * from "./Navigation";
+export * from "./page/page";
 export * from "./Section";
 export * from "./GridAnimation";
+export * from "./navigation/navigation";

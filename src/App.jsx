@@ -1,6 +1,6 @@
 import { Page, Navigation } from "./components";
-import { Home, Skills } from "./sections";
-import { Image } from "@chakra-ui/react";
+import { Home, Skills, Experience } from "./sections";
+import { useState } from "react";
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
       <Navigation />
       <Home />
       <Skills />
+      <Experience />
     </Page>
   );
 }

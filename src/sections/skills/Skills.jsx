@@ -29,12 +29,12 @@ const Icon = ({ icon: Icon, color, label }) => {
 
 function Skills() {
   return (
-    <Section maxW="100%">
+    <Section maxW="100%" id="skills">
       <HStack spacing={10}>
         {config.skills.map((skill, i) => (
           <ScaleUp delay={i * 0.12}>
             <Icon
-              key={skill.name}
+              key={skill.label}
               label={skill.label}
               icon={skill.icon}
               color={skill.color}
