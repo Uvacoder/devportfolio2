@@ -1,5 +1,5 @@
-import { H3, Text, Section } from "../..components";
-import { Icon } from "./styles";
+import { H3, Text, Section } from "../../components";
+import { Icon, JobSection } from "./styles";
 import { MountAnimation } from "../../components/animations";
 import { Box } from "@chakra-ui/react";
 
@@ -12,6 +12,11 @@ const Experience = () => (
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga assumenda
         nesciunt sed null m dolor sit amet co.
       </Text>
+      <Box h="2rem" />
+
+      <JobSection side="left" />
+
+      <JobSection side="right" />
       <Box h="20rem" />
     </Section>
   </MountAnimation>

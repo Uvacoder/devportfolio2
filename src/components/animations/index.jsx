@@ -85,12 +85,12 @@ export const MountAnimation = ({ delay, children }) => {
     <>
       <motion.div
         ref={ref}
-        animate={{ opacity: show ? 1 : 0, x: show ? 0 : "-100px" }}
+        animate={{ opacity: show ? 1 : 0, x: show ? 0 : "-50px" }}
         transition={{
           delay: delay,
           duration: 0.2,
           type: "spring",
-          stiffness: 150,
+          stiffness: 100,
         }}
       >
         {children}
