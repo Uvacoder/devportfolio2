@@ -1,5 +1,9 @@
-import { HStack, Link as ChakraLink, Heading } from "@chakra-ui/react";
-import { SocialLinks } from "../../sections/home/SocialLinks";
+import {
+  HStack,
+  Link as ChakraLink,
+  Heading,
+  IconButton,
+} from "@chakra-ui/react";
 
 export const Navbar = ({ offset, children }) => (
   <HStack
@@ -9,7 +13,7 @@ export const Navbar = ({ offset, children }) => (
     bg={offset > 0 ? "blackAlpha.400" : "transparent"}
     pos="fixed"
     transition="all 0.2s ease-in-out"
-    justify="space-center"
+    justify="space-between"
     w="100%"
     p={4}
     borderBottom="1px solid"
@@ -20,7 +24,7 @@ export const Navbar = ({ offset, children }) => (
 );
 
 export const Logo = () => (
-  <HStack w="25%">
+  <HStack w={{ base: "100%", md: "25%" }} color="white">
     <Heading>Logo</Heading>
   </HStack>
 );
@@ -48,6 +52,30 @@ export const Link = ({ link, id }) => (
     {link}
   </ChakraLink>
 );
+
+function SocialLink({ icon: Icon, url, color }) {
+  return (
+    <IconButton
+      icon={<Icon />}
+      as="a"
+      href={url}
+      target="_blank"
+      color={color}
+      bg="transparent"
+      fontSize="xl"
+    />
+  );
+}
+
+function SocialLinks({ links = [] }) {
+  return (
+    <HStack spacing={2}>
+      {links.map((link) => (
+        <SocialLink key={link.url} {...link} />
+      ))}
+    </HStack>
+  );
+}
 
 export const Social = ({ links }) => (
   <HStack w="25%" justify="end">

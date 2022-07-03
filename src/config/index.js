@@ -1,8 +1,8 @@
-import { FaGithub, FaLinkedin, FaNodeJs, FaJs } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaRust, FaJs } from "react-icons/fa";
 import { RiFlutterFill, RiReactjsFill } from "react-icons/ri";
 import { IoLogoJavascript, IoLogoNodejs, IoLogoPython } from "react-icons/io";
 import { SiSvelte, SiRuby } from "react-icons/si";
-import { DiRuby } from "react-icons/di";
+import { DiRuby, DiRust } from "react-icons/di";
 
 export default {
   photo: "https://avatars.githubusercontent.com/u/63608102?v=4",
@@ -57,6 +57,11 @@ export default {
       label: "Ruby",
       icon: DiRuby,
       color: "blue.500",
+    },
+    {
+      label: "Rust",
+      icon: FaRust,
+      color: "brown.500",
     },
   ],
 };

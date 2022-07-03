@@ -45,6 +45,20 @@ export const FadeDown = ({ delay, children }) => (
   </motion.div>
 );
 
+export const FadeRight = ({ delay, children }) => (
+  <motion.div
+    style={{ width: "100%", display: "flex", justifyContent: "center" }}
+    initial={{ opacity: 0, x: "-100px" }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{
+      delay: delay,
+      duration: 0.5,
+    }}
+  >
+    {children}
+  </motion.div>
+);
+
 export const MountAnimation = ({ delay, children }) => {
   const ref = useRef(null);
   const [show, setShow] = useState(false);

@@ -1,26 +1,16 @@
-import { FadeDown } from "../animations";
-import config from "../../config";
-import { useScrollController } from "../../hooks/useScrollController";
-import { Navbar, Logo, Link, Links, Social } from "./styles";
+import { useBreakpointValue } from "@chakra-ui/react";
+import { MobileNav } from "./mobile-nav";
+import { DesktopNav } from "./desktop-nav";
 
 const links = ["skills", "experience", "projects", "contact"];
 
 function Navigation() {
-  const { offset, id } = useScrollController();
+  const component = useBreakpointValue({
+    base: <MobileNav />,
+    md: <DesktopNav />,
+  });
 
-  return (
-    <FadeDown delay={0.2}>
-      <Navbar offset={offset}>
-        <Logo />
-        <Links>
-          {links.map((l) => (
-            <Link link={l} key={l} id={id} />
-          ))}
-        </Links>
-        <Social links={config.socialLinks} />
-      </Navbar>
-    </FadeDown>
-  );
+  return <>{component}</>;
 }
 
 export { Navigation };

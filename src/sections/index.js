@@ -1,3 +1,3 @@
-export * from "./home/Home";
-export * from "./skills/Skills";
+export * from "./home/home";
+export * from "./skills/skills";
 export * from "./experience/experience";
