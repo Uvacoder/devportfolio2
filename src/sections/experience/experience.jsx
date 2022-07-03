@@ -1,7 +1,6 @@
-import { Section } from "../../components";
-import { H3, Text } from "../../theme/components";
+import { H3, Text, Section } from "../..components";
 import { Icon } from "./styles";
-import { FadeRight, MountAnimation } from "../../components/animations";
+import { MountAnimation } from "../../components/animations";
 import { Box } from "@chakra-ui/react";
 
 const Experience = () => (

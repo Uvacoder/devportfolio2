@@ -1,6 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import { Button } from "../../theme/components";
-import { Section } from "../../components";
+import { Section, Button } from "../../components";
 import { Title, Subtitle, ActionButtons } from "./styles";
 
 function Home() {

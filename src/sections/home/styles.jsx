@@ -1,6 +1,6 @@
 import { HStack, IconButton } from "@chakra-ui/react";
 import { FadeUp } from "../../components/animations";
-import { H1, Text } from "../../theme/components";
+import { H1, Text } from "../../components";
 
 export const Title = ({ children }) => (
   <FadeUp delay={0.2}>
