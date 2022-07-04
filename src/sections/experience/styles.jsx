@@ -2,12 +2,6 @@ import { Box, HStack, VStack, Text } from "@chakra-ui/react";
 import { BiBriefcase } from "react-icons/bi";
 import { MountAnimation } from "../../components";
 
-export const Icon = () => (
-  <Box color="#21dfff" p="1rem" bg="#102b34" rounded="2xl">
-    <BiBriefcase size={32} />
-  </Box>
-);
-
 const Line = ({ ...props }) => (
   <Box bg="#21dfff" height="5rem" width="2px" rounded="full" {...props} />
 );
@@ -16,7 +10,9 @@ const JobCard = ({ children, ...props }) => (
   <HStack
     bg="#1C1D1F"
     w="23rem"
+    h="8rem"
     pos="absolute"
+    top="0"
     left={props.side === "left" ? "-5.5rem" : "unset"}
     right={props.side === "right" ? "-5rem" : "unset"}
     padding="1rem"
@@ -28,10 +24,10 @@ const JobCard = ({ children, ...props }) => (
   >
     <Box h="5rem" w="5rem" bg="gray.600" rounded="full" />
     <VStack justify="start" align="start">
-      <Text fontSize="xs" color="whiteAlpha.500">
+      <Text fontSize="xs" color="whiteAlpha.500" mb="-2">
         2021 - Present
       </Text>
-      <Text fontWeight="bold" fontSize="xl">
+      <Text fontWeight="bold" fontSize="2xl">
         Impact Suite
       </Text>
       <Text fontSize="sm">Software Developer</Text>
@@ -39,23 +35,55 @@ const JobCard = ({ children, ...props }) => (
   </HStack>
 );
 
-export const JobSection = ({ side }) => {
+const MobileCard = ({ children, ...props }) => (
+  <HStack
+    bg="#1C1D1F"
+    w="23rem"
+    h="8rem"
+    padding="1rem"
+    rounded="lg"
+    spacing="1rem"
+    cursor="pointer"
+    border="1px solid transparent"
+    transition="all 0.2s ease-in-out"
+    _hover={{
+      // transform: "scale(1.01)",
+      shadow: "xl",
+      // opacity: 0.8,
+      border: "1px solid #21dfff",
+    }}
+  >
+    <Box h="5rem" w="5rem" bg="gray.600" rounded="full" />
+    <VStack justify="start" align="start">
+      <Text fontSize="xs" color="whiteAlpha.500" mb="-2">
+        2021 - Present
+      </Text>
+      <Text fontWeight="bold" fontSize="2xl">
+        Impact Suite
+      </Text>
+      <Text fontSize="sm">Software Developer</Text>
+    </VStack>
+  </HStack>
+);
+
+export const JobSection = ({ side, isLast = false, isFirst = true }) => {
   return (
     <HStack w="100%" maxW="7xl" justify="center" align="center" pos="relative">
-      <VStack>
-        <Box
-          color="#21dfff"
-          p="1rem"
-          bg="#102b34"
-          rounded="full"
-          pos="relative"
-        >
-          <BiBriefcase size={24} />
-        </Box>
+      <VStack spacing={0}>
+        {isFirst && (
+          <Box
+            color="#21dfff"
+            p="1rem"
+            bg="#102b34"
+            rounded="full"
+            pos="relative"
+          >
+            <BiBriefcase size={24} />
+          </Box>
+        )}
         <Line />
+        <MobileCard />
       </VStack>
-
-      <JobCard side={side} />
     </HStack>
   );
 };

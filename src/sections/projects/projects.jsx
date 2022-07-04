@@ -1,22 +1,24 @@
 import { H3, Text, Section } from "../../components";
-import { JobSection } from "./styles";
+import { Grid } from "./styles";
 import { MountAnimation } from "../../components/animations";
-import { Box } from "@chakra-ui/react";
+import { Box, Center, VStack } from "@chakra-ui/react";
 import { SectionIcon } from "../shared/section-icon";
-import { BiBriefcase } from "react-icons/bi";
+import { HiLightningBolt } from "react-icons/hi";
+import { useIsMounted } from "../../hooks";
 
-const Experience = () => {
+export const Projects = () => {
+  const isMounted = useIsMounted();
+
   return (
     <MountAnimation delay={0}>
       <Section id="experience" pt="10rem" w="100%" spacing={0}>
         <SectionIcon
-          color="#21dfff"
-          bg="#102b34"
-          icon={<BiBriefcase size={32} />}
+          color="#76c57f"
+          bg="#202E23"
+          icon={<HiLightningBolt size={32} />}
         />
         <Box h="1rem" />
-
-        <H3>Experience</H3>
+        <H3>Projects</H3>
         <Box h="1rem" />
 
         <Text maxW="2xl">
@@ -25,11 +27,8 @@ const Experience = () => {
         </Text>
         <Box h="4rem" />
 
-        <JobSection side="left" isFirst />
-        <JobSection side="right" isFirst={false} />
+        <Grid />
       </Section>
     </MountAnimation>
   );
 };
-
-export { Experience };

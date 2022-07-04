@@ -1,5 +1,5 @@
 import { Page, Navigation } from "./components";
-import { Home, Skills, Experience } from "./sections";
+import { Home, Skills, Experience, Projects } from "./sections";
 import { useState } from "react";
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
       <Home />
       <Skills />
       <Experience />
+      <Projects />
     </Page>
   );
 }
