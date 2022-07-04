@@ -79,7 +79,7 @@ export const Grid = () => {
     <SimpleGrid
       w={{ base: "100%" }}
       columns={{ base: 1, md: 3 }}
-      spacing={5}
+      spacing={10}
       px="1rem"
     >
       <Card tags={_tags} />

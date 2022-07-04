@@ -15,10 +15,12 @@ export const useScrollController = () => {
 
       const skill = document.getElementById("skills");
       const experience = document.getElementById("experience");
+      const projects = document.getElementById("projects");
 
       if (window.scrollY < 300) return setId("home");
       if (skill.getBoundingClientRect().y <= 700) setId("skills");
       if (experience.getBoundingClientRect().y <= 300) setId("experience");
+      if (projects.getBoundingClientRect().y <= 300) setId("projects");
     };
 
     window.addEventListener("scroll", handleScroll);

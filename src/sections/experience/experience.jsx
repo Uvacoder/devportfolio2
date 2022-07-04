@@ -26,7 +26,7 @@ const Experience = () => {
         <Box h="4rem" />
 
         <JobSection side="left" isFirst />
-        <JobSection side="right" isFirst={false} />
+        <JobSection side="right" isLast />
       </Section>
     </MountAnimation>
   );

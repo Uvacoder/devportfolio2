@@ -11,7 +11,7 @@ export const Projects = () => {
 
   return (
     <MountAnimation delay={0}>
-      <Section id="experience" pt="10rem" w="100%" spacing={0}>
+      <Section id="projects" pt="10rem" w="100%" spacing={0}>
         <SectionIcon
           color="#76c57f"
           bg="#202E23"

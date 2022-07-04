@@ -1,4 +1,10 @@
-import { Box, HStack, VStack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  HStack,
+  VStack,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import { BiBriefcase } from "react-icons/bi";
 import { MountAnimation } from "../../components";
 
@@ -66,24 +72,42 @@ const MobileCard = ({ children, ...props }) => (
   </HStack>
 );
 
-export const JobSection = ({ side, isLast = false, isFirst = true }) => {
-  return (
-    <HStack w="100%" maxW="7xl" justify="center" align="center" pos="relative">
-      <VStack spacing={0}>
-        {isFirst && (
-          <Box
-            color="#21dfff"
-            p="1rem"
-            bg="#102b34"
-            rounded="full"
-            pos="relative"
-          >
-            <BiBriefcase size={24} />
-          </Box>
-        )}
-        <Line />
-        <MobileCard />
-      </VStack>
-    </HStack>
-  );
+const DesktopSection = ({ children, ...props }) => (
+  <HStack w="100%" maxW="7xl" justify="center" align="center" pos="relative">
+    <VStack spacing={0}>
+      <Box color="#21dfff" p="1rem" bg="#102b34" rounded="full" pos="relative">
+        <BiBriefcase size={24} />
+      </Box>
+      {!props?.isLast && <Line />}
+      <JobCard side={props.side} />
+    </VStack>
+  </HStack>
+);
+
+const MobileSection = ({ children, ...props }) => (
+  <HStack w="100%" maxW="7xl" justify="center" align="center" pos="relative">
+    <VStack spacing={0}>
+      {props?.isFirst && (
+        <Box
+          color="#21dfff"
+          p="1rem"
+          bg="#102b34"
+          rounded="full"
+          pos="relative"
+        >
+          <BiBriefcase size={24} />
+        </Box>
+      )}
+      <Line />
+      <MobileCard />
+    </VStack>
+  </HStack>
+);
+
+export const JobSection = ({ ...props }) => {
+  const component = useBreakpointValue({
+    base: <MobileSection {...props} />,
+    md: <DesktopSection {...props} />,
+  });
+  return <>{component}</>;
 };
