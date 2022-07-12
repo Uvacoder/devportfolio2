@@ -7,8 +7,6 @@ import { HiLightningBolt } from "react-icons/hi";
 import { useIsMounted } from "../../hooks";
 
 export const Projects = () => {
-  const isMounted = useIsMounted();
-
   return (
     <MountAnimation delay={0}>
       <Section id="projects" pt="10rem" w="100%" spacing={0}>
